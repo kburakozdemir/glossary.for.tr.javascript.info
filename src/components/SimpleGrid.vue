@@ -95,6 +95,10 @@ table {
   background-color: #fff;
 }
 
+tr td:first-child {
+  text-align: right;
+}
+
 th {
   background-color: #42b983;
   color: rgba(255, 255, 255, 0.66);
