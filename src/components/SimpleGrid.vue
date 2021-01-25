@@ -30,6 +30,7 @@ export default {
   props: {
     gridData: Array,
     gridColumns: Array,
+    iniSortKey: String,
     filterKey: String,
   },
   data: function () {
@@ -74,10 +75,20 @@ export default {
       return str.charAt(0).toUpperCase() + str.slice(1);
     },
   },
+  mounted() {
+    let iniSortKey;
+    if (this.iniSortKey) {
+      iniSortKey = this.iniSortKey;
+    } else {
+      iniSortKey = this.gridColumns[0];
+    }
+    this.sortBy(iniSortKey);
+    this.sortOrders[iniSortKey] = this.sortOrders[iniSortKey] * -1;
+  },
 };
 </script>
 
-<style lang="css" scoped>
+<style scoped>
 table {
   border: 2px solid #42b983;
   border-radius: 3px;
