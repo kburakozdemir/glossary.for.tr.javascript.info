@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: "/project name/",
+  publicPath: "/glossary.for.tr.javascript.info/",
 };
