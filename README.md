@@ -1,5 +1,8 @@
 # t
 
+node version v10.23.1
+prettier
+
 ## Project setup
 ```
 yarn install
