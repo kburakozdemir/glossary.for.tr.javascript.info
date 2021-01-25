@@ -3,7 +3,7 @@
     <thead>
       <tr>
         <th
-          v-for="key in columns"
+          v-for="key in gridColumns"
           @click="sortBy(key)"
           :class="{ active: sortKey == key }"
           :key="key"
@@ -15,8 +15,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="entry in filteredHeroes" :key="entry">
-        <td v-for="key in columns" :key="key">
+      <tr v-for="entry in filteredGridData" :key="entry">
+        <td v-for="key in gridColumns" :key="key">
           {{ entry[key] }}
         </td>
       </tr>
@@ -28,13 +28,13 @@
 export default {
   name: "SimpleGrid",
   props: {
-    heroes: Array,
-    columns: Array,
+    gridData: Array,
+    gridColumns: Array,
     filterKey: String,
   },
   data: function () {
     var sortOrders = {};
-    this.columns.forEach(function (key) {
+    this.gridColumns.forEach(function (key) {
       sortOrders[key] = 1;
     });
     return {
@@ -43,26 +43,26 @@ export default {
     };
   },
   computed: {
-    filteredHeroes: function () {
+    filteredGridData: function () {
       var sortKey = this.sortKey;
       var filterKey = this.filterKey && this.filterKey.toLowerCase();
       var order = this.sortOrders[sortKey] || 1;
-      var heroes = this.heroes;
+      var gridData = this.gridData;
       if (filterKey) {
-        heroes = heroes.filter(function (row) {
+        gridData = gridData.filter(function (row) {
           return Object.keys(row).some(function (key) {
             return String(row[key]).toLowerCase().indexOf(filterKey) > -1;
           });
         });
       }
       if (sortKey) {
-        heroes = heroes.slice().sort(function (a, b) {
+        gridData = gridData.slice().sort(function (a, b) {
           a = a[sortKey];
           b = b[sortKey];
           return (a === b ? 0 : a > b ? 1 : -1) * order;
         });
       }
-      return heroes;
+      return gridData;
     },
   },
   methods: {
@@ -78,12 +78,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-body {
-  font-family: Helvetica Neue, Arial, sans-serif;
-  font-size: 14px;
-  color: #444;
-}
-
 table {
   border: 2px solid #42b983;
   border-radius: 3px;

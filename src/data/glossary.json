@@ -1,22 +1,25 @@
-[
-  {
-    "id": 1,
-    "en": "Chuck Norris",
-    "tr": "Infinity"
-  },
-  {
-    "id": 2,
-    "en": "Test This",
-    "tr": 9000
-  },
-  {
-    "id": 3,
-    "en": "Jackie Chan",
-    "tr": 7000
-  },
-  {
-    "id": 4,
-    "en": "Jet Li",
-    "tr": 8000
-  }
-]
+{
+  "columns": ["id", "en", "tr"],
+  "data": [
+    {
+      "id": 1,
+      "en": "Chuck Norris",
+      "tr": "Infinity"
+    },
+    {
+      "id": 2,
+      "en": "Test This",
+      "tr": 9000
+    },
+    {
+      "id": 3,
+      "en": "Jackie Chan",
+      "tr": 7000
+    },
+    {
+      "id": 4,
+      "en": "Jet Li",
+      "tr": 8000
+    }
+  ]
+}

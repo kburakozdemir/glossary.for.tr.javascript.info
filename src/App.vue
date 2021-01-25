@@ -2,8 +2,8 @@
   <Title msg="Glossary" />
   <form id="search">Search <input name="query" v-model="searchQuery" /></form>
   <SimpleGrid
-    :heroes="gridData"
-    :columns="gridColumns"
+    :gridData="gridData"
+    :gridColumns="gridColumns"
     :filter-key="searchQuery"
   />
   <p>
@@ -16,12 +16,12 @@
           >Grid Component Example</a
         ></em
       ></small
-    >
+    >.
   </p>
 </template>
 
 <script>
-import json from "./data/glossary.json";
+import data from "./data/glossary.json";
 
 import Title from "./components/Title.vue";
 import SimpleGrid from "./components/SimpleGrid.vue";
@@ -34,8 +34,8 @@ export default {
   data: function () {
     return {
       searchQuery: "",
-      gridColumns: ["id", "en", "tr"],
-      gridData: json,
+      gridColumns: data.columns,
+      gridData: data.data,
     };
   },
 };
@@ -53,5 +53,11 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  color: #444;
 }
 </style>
