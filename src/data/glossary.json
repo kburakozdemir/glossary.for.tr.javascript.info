@@ -3,23 +3,58 @@
   "data": [
     {
       "id": 1,
-      "en": "Chuck Norris",
-      "tr": "Infinity"
+      "en": "Tutorial",
+      "tr": "Eğitim"
     },
     {
       "id": 2,
-      "en": "Test This",
-      "tr": 9000
+      "en": "Structure",
+      "tr": "Yapı"
     },
     {
       "id": 3,
-      "en": "Jackie Chan",
-      "tr": 7000
+      "en": "Chapter",
+      "tr": "Bölüm"
     },
     {
       "id": 4,
-      "en": "Jet Li",
-      "tr": 8000
+      "en": "Article",
+      "tr": "Makale"
+    },
+    {
+      "id": 5,
+      "en": "Task",
+      "tr": "Görev"
+    },
+    {
+      "id": 6,
+      "en": "Folder",
+      "tr": "Klasör"
+    },
+    {
+      "id": 7,
+      "en": "Solution",
+      "tr": "Çözüm"
+    },
+    {
+      "id": 8,
+      "en": "Lnaguage",
+      "tr": "Dil"
+    },
+    {
+      "id": 9,
+      "en": "Environment",
+      "tr": "Ortam"
+    },
+    {
+      "id": 10,
+      "en": "Programs",
+      "tr": "Kod kümeleri"
+    },
+    {
+      "id": 11,
+      "en": "Script(s)",
+      "tr": "Betik"
     }
   ]
 }
