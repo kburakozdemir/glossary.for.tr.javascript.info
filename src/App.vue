@@ -32,10 +32,15 @@ export default {
     Title,
   },
   data: function () {
+    // Table headers are populated from the data itself
+    var gColumns = Object.keys(data.data[0]);
+    // Alternative
+    // var gColumns = data.colums;
+
     return {
       searchQuery: "",
-      gridColumns: data.columns,
       gridData: data.data,
+      gridColumns: gColumns,
     };
   },
 };
@@ -56,7 +61,7 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   color: #444;
 }
