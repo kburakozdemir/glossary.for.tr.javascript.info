@@ -6,30 +6,21 @@
     :gridColumns="gridColumns"
     :filter-key="searchQuery"
   />
-  <p>
-    <small
-      ><em
-        >Inspired by official
-        <a
-          href="https://vuejs.org/v2/examples/grid-component.html"
-          target="_blank"
-          >Grid Component Example</a
-        ></em
-      ></small
-    >.
-  </p>
+ <Footer />
 </template>
 
 <script>
 import data from "./data/glossary.json";
 
 import Title from "./components/Title.vue";
+import Footer from "./components/Footer.vue";
 import SimpleGrid from "./components/SimpleGrid.vue";
 export default {
   name: "App",
   components: {
     SimpleGrid,
     Title,
+    Footer,
   },
   data: function () {
     // Table headers are populated from the data itself
